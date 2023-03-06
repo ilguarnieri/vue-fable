@@ -1,0 +1,123 @@
+@import '~@fontsource/open-sans/index.css';
+@import '~@fontsource/handlee/index.css';
+@import './variables';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+.container{
+    max-width: 1030px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+ol, ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: currentColor;
+}
+
+.btn{
+    border: none;
+    padding: 15px 20px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    white-space: nowrap;
+    user-select: none;
+}
+
+/* SCROLL-BAR STYLE */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background: $green;
+}
+
+@mixin transition{
+    transition: all 250ms linear;
+}
+
+@mixin btn__orange{
+    text-transform: uppercase;
+    background-color: $orange;
+    border: none;
+
+    &:hover{
+        background-color: $butterfly;
+    }
+}
+
+@mixin btn__violet{
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 2px solid $white;
+    user-select: none;
+
+    &:hover{
+        background-color: $white;
+        a{
+            color: $butterfly;
+        }
+    }
+}
+
+@mixin btn_arrow {
+    content: '';
+    position: absolute;
+    height: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: 105%;
+    border: 5px solid transparent;    
+}
+
+@mixin font17{
+    font-size: min(3.7vw, 17px);
+}
+
+@mixin font20{
+    font-size: min(4vw, 20px);
+}
+
+@mixin font23{
+    font-size: min(5.5vw, 23px);
+}
+
+@mixin font27{
+    font-size: min(6vw, 27px);
+}
+
+@mixin font35{
+    font-size: min(6vw, 35px);
+}
+
+@mixin font40{
+    font-size: min(8vw, 40px);
+}
+
+@mixin font45{
+    font-size: min(7.5vw, 45px);
+}
+
+@mixin font50{
+    font-size: min(9vw, 50px);
+}
